@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 65rem;
+  margin: 7rem auto;
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+}
+
+* {
+  font-size: 1.8rem;
+}
+
+.heading-primary {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-weight: 500;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-weight: 400;
+  color: #5a5a5a;
+  @supports (text-wrap: balance) {
+    text-wrap: balance;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about {
+  text-wrap: balance;
+}
+
+.section,
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section__heading,
+.footer__heading {
+  align-self: flex-start;
+  font-weight: normal;
+  background-image: linear-gradient(#5a5a5a, #5a5a5a);
+  background-size: 100% 1px;
+  background-position: left 1.3em;
+  background-repeat: no-repeat;
+}
+
+.section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.section__link > span:first-child {
+  font-weight: 500;
+}
+
+.section__link > span:last-child {
+  color: #5a5a5a;
+}
+
+.footer__links a {
+  color: #5a5a5a;
+}
+
+/* Custom Scroll Bar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4c2c1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5a5a5a;
+}
+
+@media (max-width: 56.25em) {
+  body {
+    padding: 2rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .section__link:not(:last-child) {
+    border-bottom: 1px dashed #eee;
+  }
+
+  .section__link:hover {
+    border-color: #5a5a5a;
+  }
+}
