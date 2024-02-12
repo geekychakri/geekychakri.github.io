@@ -76,10 +76,6 @@ p {
 .footer__heading {
   align-self: flex-start;
   font-weight: normal;
-  background-image: linear-gradient(#5a5a5a, #5a5a5a);
-  background-size: 100% 1px;
-  background-position: left 1.3em;
-  background-repeat: no-repeat;
 }
 
 .section__list {
@@ -101,6 +97,21 @@ p {
 
 .section__link > span:last-child {
   color: #5a5a5a;
+}
+
+.section__project {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.section__project-title {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #c7c7c7;
+  text-decoration-color: #c7c7c7;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 300ms;
 }
 
 .footer__links a {
@@ -130,13 +141,8 @@ p {
     padding: 2rem;
   }
 }
-
 @media (hover: hover) and (pointer: fine) {
-  .section__link:not(:last-child) {
-    border-bottom: 1px dashed #eee;
-  }
-
-  .section__link:hover {
-    border-color: #5a5a5a;
+  .section__project-title:hover {
+    text-decoration-color: #5a5a5a;
   }
 }
