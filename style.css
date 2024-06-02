@@ -54,7 +54,7 @@ body {
 
 .heading-primary--main {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .heading-primary--sub {
@@ -78,6 +78,7 @@ body {
 .footer__heading {
   align-self: flex-start;
   color: var(--heading-color);
+  font-weight: 500;
 }
 
 .section__text {
