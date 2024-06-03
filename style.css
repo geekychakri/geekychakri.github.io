@@ -3,6 +3,9 @@
   --text-color: #424242;
   --heading-color: #6f6f6f;
   --scrollbar-thumb-color: #e7e7e7;
+  --selection: rgba(0, 0, 0, 0.071);
+  --link-decoration-color: #c7c7c7;
+  --link-hover-decoration-color: #5a5a5a;
 }
 
 @font-face {
@@ -39,6 +42,7 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   color: var(--text-color);
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -100,34 +104,47 @@ body {
 }
 
 .section__link {
-  display: flex;
-  flex-direction: column;
   text-decoration: none;
   color: inherit;
 }
 
-.section__link > span:last-child {
-  color: var(--heading-color);
-}
-
 .section__project {
   display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section__project-title {
+  display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
+}
+
+.section__project-title > span:first-child {
+  font-weight: 500;
 }
 
 .section__project-title,
 .footer__links a {
   text-decoration: underline;
-  -webkit-text-decoration-color: #c7c7c7;
-  text-decoration-color: #c7c7c7;
+  -webkit-text-decoration-color: var(--link-decoration-color);
+  text-decoration-color: var(--link-decoration-color);
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
   transition: text-decoration-color 300ms;
 }
 
+.section__project-description {
+  color: var(--heading-color);
+}
+
 .footer__links a {
   color: var(--text-color);
+}
+
+::selection {
+  background-color: var(--selection);
+  text-shadow: none;
 }
 
 @media (max-width: 56.25em) {
@@ -138,7 +155,7 @@ body {
 @media (hover: hover) and (pointer: fine) {
   .section__project-title:hover,
   .footer__links a:hover {
-    text-decoration-color: #5a5a5a;
+    text-decoration-color: var(--link-hover-decoration-color);
   }
 }
 
@@ -148,5 +165,6 @@ body {
     --text-color: #ffffff;
     --heading-color: #a0a0a0;
     --scrollbar-thumb-color: #2e2e2e;
+    --selection: hsla(0, 0%, 100%, 0.077);
   }
 }
