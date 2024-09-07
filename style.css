@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Inter";
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
   font-weight: 100 900;
   src: url(/inter-latin-wght-normal.woff2) format("woff2");
 }
@@ -138,6 +138,18 @@ body {
   color: var(--heading-color);
 }
 
+.section__duration {
+  display: flex;
+}
+
+.section__duration > p {
+  flex: 1;
+}
+
+.section__duration > p:nth-child(2) {
+  color: var(--heading-color);
+}
+
 .footer__links a {
   color: var(--text-color);
 }
@@ -150,6 +162,10 @@ body {
 @media (max-width: 56.25em) {
   body {
     padding: 2rem;
+  }
+  .section__duration {
+    flex-direction: column;
+    gap: 4px;
   }
 }
 @media (hover: hover) and (pointer: fine) {
